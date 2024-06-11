@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         program: "./src/index.ts",
         sandbox: "./src/sandbox.ts",
+        calc: "./src/calc/index.ts",
     },
     output: {
         path: path.resolve(__dirname, "dist"),

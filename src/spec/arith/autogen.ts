@@ -1,5 +1,5 @@
-import { type TopDownParseParams, type ParseTable } from "../../parse";
-import { parseRule, parseTable } from "../../parse/utils";
+import { type TopDownParseParams } from "../../parse";
+import { parseTable } from "../../parse/utils";
 
 const rawTable = [
     [ 'error', 'error', 'E -> T E1', 'E -> T E1', 'error', 'error',  ],
@@ -9,14 +9,15 @@ const rawTable = [
     [ 'error', 'error', 'F -> n', 'F -> ( E )', 'error', 'error',  ],
 ]
 
-const nonTerminalsOrder = ['E', 'Et', 'T', 'Tt', 'F'];
-
-const terminalsOrder = ['+', '*', '(', ')', 'id', '$'];
+const nonTerminalsOrder = ['E', 'E1', 'T', 'T1', 'F'];
+const terminalsOrder = ['+', '*', 'n', '(', ')', '$'];
 
 const table = parseTable(rawTable);
 
 export const delta = (X: string, a: string) => {
-    return table[nonTerminalsOrder.indexOf(X)][terminalsOrder.indexOf(a)];
+    const i = nonTerminalsOrder.indexOf(X);
+    const j = terminalsOrder.indexOf(a);
+    return table[i][j];
 }
 
 export const parseParams: TopDownParseParams = {

@@ -2,7 +2,7 @@ import * as fs from "fs/promises";
 import { lex } from "./lex";
 import { topDownParse } from "./parse";
 import { domains } from "./spec/rules/lex";
-import { parseParams } from "./spec/rules/table";
+import { parseParams } from "./spec/rules/handmade";
 import { toGraph } from "./format";
 import { getParseTable, toLang } from "./gen/lang";
 import { toLiteral } from "./format/ToLiteral";

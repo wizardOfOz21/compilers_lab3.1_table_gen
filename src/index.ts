@@ -14,7 +14,6 @@ try {
 
     const tokens = lex(data, domains).filter(t => t.tag != 'comment');
     console.log("Фаза лексического анализа позади!");
-
     const { tree } = topDownParse(tokens, parseParams);
     console.log("Построено дерево разбора, загляните в out/imgs!");
     fs.writeFile("out/graph", toGraph(tree));
