@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`lexer работаетб 1`] = `
+[
+  {
+    "attr": "abba",
+    "tag": "ident",
+  },
+  {
+    "attr": null,
+    "tag": "::=",
+  },
+  {
+    "attr": null,
+    "tag": ";",
+  },
+  {
+    "attr": null,
+    "tag": ",",
+  },
+  {
+    "attr": null,
+    "tag": "|",
+  },
+  {
+    "attr": null,
+    "tag": "|",
+  },
+  {
+    "attr": "asdasd",
+    "tag": "string",
+  },
+  {
+    "attr": null,
+    "tag": "#axiom",
+  },
+  {
+    "attr": null,
+    "tag": "#terminal",
+  },
+  {
+    "attr": null,
+    "tag": "#epsilon",
+  },
+  {
+    "attr": null,
+    "tag": "#non_terminal",
+  },
+  {
+    "attr": null,
+    "tag": "comment",
+  },
+]
+`;

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --mode development --watch",
-    "run": "node dist/bundle.js"
+    "run": "node dist/program.js",
+    "sb": "node dist/sandbox.js"
   },
   "author": "",
   "license": "ISC",
