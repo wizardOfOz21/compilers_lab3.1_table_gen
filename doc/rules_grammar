@@ -10,7 +10,7 @@ ISL -> E ISLt
 ISLt -> , E ISLt
 ISLt -> ''
 
-RS -> R ; RSt ;
+RS -> R ; RSt
 RSt -> R ; RSt
 RSt -> ''
 

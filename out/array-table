@@ -1,0 +1,18 @@
+[
+[ "X -> NTS TS RS AX", 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error',  ],
+[ "NTS -> non-terminal IL ;", 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error',  ],
+[ 'error', 'error', "IL -> id ILt", 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error',  ],
+[ 'error', "ILt -> ", 'error', "ILt -> , id ILt", 'error', 'error', 'error', 'error', 'error', 'error', 'error',  ],
+[ 'error', 'error', 'error', 'error', "TS -> terminal ISL ;", 'error', 'error', 'error', 'error', 'error', 'error',  ],
+[ 'error', 'error', "ISL -> E ISLt", 'error', 'error', 'error', 'error', 'error', "ISL -> E ISLt", 'error', 'error',  ],
+[ 'error', "ISLt -> ", 'error', "ISLt -> , E ISLt", 'error', 'error', 'error', 'error', 'error', 'error', 'error',  ],
+[ 'error', 'error', "RS -> R ; RSt", 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error',  ],
+[ 'error', 'error', "RSt -> R ; RSt", 'error', 'error', 'error', 'error', 'error', 'error', "RSt -> ", 'error',  ],
+[ 'error', 'error', "R -> id ::= SS", 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error',  ],
+[ 'error', 'error', "SS -> S SSt", 'error', 'error', 'error', 'error', "SS -> S SSt", "SS -> S SSt", 'error', 'error',  ],
+[ 'error', "SSt -> ", 'error', 'error', 'error', 'error', "SSt -> | S SSt", 'error', 'error', 'error', 'error',  ],
+[ 'error', 'error', "S -> E St", 'error', 'error', 'error', 'error', "S -> epsilon", "S -> E St", 'error', 'error',  ],
+[ 'error', "St -> ", "St -> E St", 'error', 'error', 'error', "St -> ", 'error', "St -> E St", 'error', 'error',  ],
+[ 'error', 'error', "E -> id", 'error', 'error', 'error', 'error', 'error', "E -> str", 'error', 'error',  ],
+[ 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error', 'error', "AX -> axiom id ;", 'error',  ],
+]

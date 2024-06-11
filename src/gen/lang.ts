@@ -66,7 +66,12 @@ const getTerms = (v: Vertex) => {
         return;
     }
     if (v.nterm === "E") {
-        terms.push((v.childs[0] as ExternalVertex).val.attr);
+        const c = v.childs[0] as ExternalVertex;
+        if (c.val.tag === 'str') {
+            terms.push(`'${c.val.attr}'`)
+        } else {
+            terms.push(c.val.attr);
+        }
     }
 };
 
@@ -84,7 +89,12 @@ const getRules = (v: InternalVertex) => {
                     return;
                 }
                 if (e.nterm === "E") {
-                    rhs.push((e.childs[0] as ExternalVertex).val.attr);
+                    const c = e.childs[0] as ExternalVertex;
+                    if (c.val.tag === 'str') {
+                        rhs.push(`'${c.val.attr}'`)
+                    } else {
+                        rhs.push(c.val.attr);
+                    }
                 }
             });
             rules.push({ lhs, rhs });

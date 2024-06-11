@@ -1,0 +1,32 @@
+non-terminal X, NTS, IL, ILt, TS, ISL, ISLt, 
+        RS, RSt, R, SS, SSt, S, St, E, AX;
+terminal 'non-terminal', ';', id, ',', 'terminal', '::=', 
+        '|', 'epsilon', str, 'axiom' ;
+
+X ::= NTS TS RS AX ;
+
+NTS ::= 'non-terminal' IL ';' ;
+IL ::= id ILt ;
+ILt ::= ',' id ILt | epsilon ;
+
+TS ::= 'terminal' ISL ';' ;
+ISL ::= E ISLt ;
+ISLt ::= ',' E ISLt | epsilon ;
+
+RS ::= R ';' RSt ; 
+RSt ::= R ';' RSt | epsilon ;
+
+R ::= id '::=' SS ;
+SS ::= S SSt ;
+SSt ::= '|' S SSt | epsilon ;
+
+S ::= 'epsilon' | E St ;
+St ::= E St | epsilon ;
+
+E ::= id | str ;
+
+AX ::= 'axiom' id ';' ;
+
+axiom X;
+
+$
