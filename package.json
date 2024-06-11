@@ -7,7 +7,10 @@
     "test": "jest",
     "build": "webpack --mode development --watch",
     "run": "node dist/program.js",
-    "sb": "node dist/sandbox.js"
+    "sb": "node dist/sandbox.js",
+    "print": "dot -Tjpg -Gdpi=300 -o out/imgs/out_.jpg out/graph",
+    "print:sb": "npm run sb & npm run print",
+    "print:build": "npm run run & npm run print"
   },
   "author": "",
   "license": "ISC",

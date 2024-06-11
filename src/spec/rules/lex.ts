@@ -3,19 +3,19 @@ import { DomainSpec } from "../../lex";
 // приоритет задаётся порядком в массиве
 export const domains: DomainSpec[] = [
     {
-        tag: "#non_terminal",
+        tag: "non-terminal",
         re: /^non-terminal\b/,
     },
     {
-        tag: "#terminal",
+        tag: "terminal",
         re: /^terminal\b/,
     },
     {
-        tag: "#axiom",
+        tag: "axiom",
         re: /^axiom\b/,
     },
     {
-        tag: "#epsilon",
+        tag: "epsilon",
         re: /^epsilon\b/,
     },
     {
@@ -23,13 +23,13 @@ export const domains: DomainSpec[] = [
         re: /^#[^$\n]*/,
     },
     {
-        tag: "ident",
+        tag: "id",
         re: /^[a-zA-Z]\w*/,
         getAttr: (match) => match[0],
     },
     {
-        tag: "string",
-        re: /^'([^\n]*)'/,
+        tag: "str",
+        re: /^'([^\n]*?)'/,
         getAttr: (match) => match[1],
     },
     {

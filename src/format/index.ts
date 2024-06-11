@@ -26,7 +26,7 @@ const getOrder = (order: any[]) => {
 let counter = 0;
 let nterms: number[];
 
-export const toGraph = (root: InternalVertex, out: string) => {
+export const toGraph = (root: InternalVertex) => {
     let resultString: string = "";
 
     counter = 0;
@@ -36,7 +36,7 @@ export const toGraph = (root: InternalVertex, out: string) => {
     resultString += getOrder(nterms);
     resultString += "\n}";
 
-    fs.writeFileSync(out, resultString);
+    return resultString;
 };
 
 export const toGraphDFS = (v: Vertex) => {

@@ -1,17 +1,17 @@
-S -> NTS ; TS ; RS ; AX ;
+X -> NTS TS RS AX
 
-NTS -> non-terminal IL
+NTS -> non-terminal IL ;
 IL -> id ILt
 ILt -> , id ILt
 ILt -> ''
 
-TS -> terminal ISL
+TS -> terminal ISL ;
 ISL -> E ISLt
 ISLt -> , E ISLt
 ISLt -> ''
 
-RS -> R RSt
-RSt -> ; R RSt
+RS -> R ; RSt ;
+RSt -> R ; RSt
 RSt -> ''
 
 R -> id ::= SS
@@ -24,19 +24,7 @@ S -> E St
 St -> E St 
 St -> ''
 
-E -> id | str
+E -> id
+E -> str
 
-AX -> axiom id
-
-
-non-terminal id, id, id, id, id;
-terminal str, str, str, str, id;
-
-id  ::= id id;
-id ::= str id id | epsilon;
-id  ::= id id;
-id ::= str id id | epsilon;
-id  ::= id | str id str;
-
-axiom id;
-
+AX -> axiom id ;

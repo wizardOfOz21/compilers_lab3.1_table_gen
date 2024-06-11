@@ -1,0 +1,7 @@
+[
+[ 'error', 'error', 'E -> T E1', 'E -> T E1', 'error', 'error',  ],
+[ 'E1 -> + T E1', 'error', 'error', 'error', 'E1 -> ', 'E1 -> ',  ],
+[ 'error', 'error', 'T -> F T1', 'T -> F T1', 'error', 'error',  ],
+[ 'T1 -> ', 'T1 -> * F T1', 'error', 'error', 'T1 -> ', 'T1 -> ',  ],
+[ 'error', 'error', 'F -> n', 'F -> ( E )', 'error', 'error',  ],
+]

@@ -1,8 +1,10 @@
-# ключевые слова
-# начинаются с кавычки
+non-terminal E, E1, T, T1, F;
+terminal '+', '*', n, '(', ')';
 
-F -> "n" 'or "(" E ")" 'end
-T -> F T1 'end
-T1 -> "*" F T1 'or 'epsilon 'end
-'axiom E -> T E1 'end
-E1 -> "+" T E1 'or 'epsilon 'end
+E  ::= T E1;
+E1 ::= '+' T E1 | epsilon;
+T  ::= F T1;
+T1 ::= '*' F T1 | epsilon;
+F  ::= n | '(' E ')';
+
+axiom E; $
