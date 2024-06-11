@@ -7,3 +7,4 @@ export const parseRule = (str: string) => {
 export const parseInput = (str: string) => {
     return str.split(' ').filter(v => v !== '');
 }
+
