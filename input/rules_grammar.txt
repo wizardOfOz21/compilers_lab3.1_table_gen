@@ -1,7 +1,10 @@
+# объявления
 non-terminal X, NTS, IL, ILt, TS, ISL, ISLt, 
         RS, RSt, R, SS, SSt, S, St, E, AX;
 terminal 'non-terminal', ';', id, ',', 'terminal', '::=', 
         '|', 'epsilon', str, 'axiom' ;
+
+# правила грамматики
 
 X ::= NTS TS RS AX ;
 

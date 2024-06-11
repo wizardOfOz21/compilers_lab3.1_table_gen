@@ -42,12 +42,20 @@ export const checkMultipleDecl = (lang: Language) => {
     return dupls.length === 0;
 };
 
+export const errorMessages = [
+    "Аксиома не определена",
+    "Определено несколько аксиом",
+    "Множественная декларация символа",
+    "Множества описанных и определенных нетерминалов не совпадают",
+    "Использован неделарированный символ"
+]
+
 export const checkSimple = (lang: Language) => {
-    return (
-        checkAxiomDefine(lang) &&
-        checkMultipleAxiomDefine(lang) &&
-        checkMultipleDecl(lang) &&
-        checkNTermDef(lang) &&
-        checkUse(lang)
-    );
+    return [
+        checkAxiomDefine(lang),
+        checkMultipleAxiomDefine(lang),
+        checkMultipleDecl(lang),
+        checkNTermDef(lang),
+        checkUse(lang),
+    ]
 };
