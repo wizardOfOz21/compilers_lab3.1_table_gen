@@ -1,5 +1,5 @@
 import { type TopDownParseParams, type ParseTable } from "../../parse";
-import { parseInput, parseRule } from "../../parse/utils";
+import { parseRule } from "../../parse/utils";
 
 const error = "error";
 
