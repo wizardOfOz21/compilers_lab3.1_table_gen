@@ -16,7 +16,7 @@ TS ::= 'terminal' ISL ';' ;
 ISL ::= E ISLt ;
 ISLt ::= ',' E ISLt | epsilon ;
 
-RS ::= R ';' RSt ; 
+RS ::= R ';' RSt ;
 RSt ::= R ';' RSt | epsilon ;
 
 R ::= id '::=' SS ;

@@ -1,3 +1,7 @@
 {
-    "tabWidth": 4
+    "printWidth": 80,
+    "proseWrap": "always",
+  
+    "comment": "в markdown разрывание строк по умолчанию выключено, proseWrap: always его включает "
 }
+  
